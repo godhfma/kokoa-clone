@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import "reset.css";
 @import "status-bar.css";
+@import "variables.css";
 
 body {
   font-family: "Varela Round", sans-serif;
@@ -22,4 +23,30 @@ body {
 .welcome-header__text {
   width: 60%;
   opacity: 0.7;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+
+#login-form input {
+  border: none;
+  padding: 20px 0px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out;
+  /*애니메이션 효과?*/
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  outline: none;
+  /* reset.css에 적어도 됨 */
+  border-color: var(--yellow);
 }
