@@ -1,3 +1,5 @@
-#Kokoa Clone 2020 Update
+#Kokoa Clone with Nomadcoders
 
-HTML & CSS are so much fun^^
+This is my first html & css code.
+
+Thankx for whatching
