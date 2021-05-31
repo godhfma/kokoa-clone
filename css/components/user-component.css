@@ -11,6 +11,7 @@
   height: 70px;
   border-radius: 27px;
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 .user-component__title {
   font-weight: bold;
