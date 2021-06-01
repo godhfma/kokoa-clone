@@ -1,0 +1,30 @@
+.screen-header__icons {
+  position: relative;
+}
+
+.screen-header__small-dot2 {
+  width: 5px;
+  height: 5px;
+  background-color: tomato;
+  border-radius: 20px;
+  position: absolute;
+  left: 133px;
+  top: -5px;
+}
+.user-component__line {
+  position: relative;
+}
+
+.user-component__warn {
+  color: red;
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: block;
+  text-align: center;
+  opacity: 0.6;
+  position: absolute;
+  top: 27px;
+  right: -22px;
+}
