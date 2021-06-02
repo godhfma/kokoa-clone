@@ -1,0 +1,32 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alt-header__title {
+  font-size: 28px;
+  font-weight: bold;
+}
+/* space-between이 글자 수에 따라서 배열이 중앙 정열이 안된다는 점
+따라서 마진 좌, 우 각각에 auto를 주어 중앙 정렬 배치 */
+
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+.alt-header__column:last-child {
+  margin-left: auto;
+}
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  display: flex;
+  align-items: center; /*아이콘과 글이 가운데 정렬, jutify는 전체가 가운데 정렬*/
+}
+.settings__setting i {
+  margin-right: 13px;
+  font-size: 20px;
+  opacity: 0.8;
+}
