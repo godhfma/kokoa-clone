@@ -1,0 +1,29 @@
+#chat-screen {
+  background-color: #abc1d1;
+  height: 800vh; /*스크롤 주려고*/
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0;
+}
+#chat-screen .alt-header {
+  z-index: 2;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+
+.alt-header__column span:last-child {
+  margin-left: 20px;
+}
+
+#chat-screen .alt-header {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat__timestamp {
+  padding-top: 120px;
+}
