@@ -8,7 +8,7 @@
   top: 0;
 }
 #chat-screen .alt-header {
-  z-index: 2;
+  z-index: 1;
 }
 #chat-screen .status-bar {
   z-index: 2;
@@ -22,8 +22,81 @@
   position: fixed;
   width: 100%;
   box-sizing: border-box;
+  top: 10px;
+}
+.main-chat {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column; /*아래 내용일 수직으로 세울거라*/
+  align-items: center;
 }
 
 .chat__timestamp {
-  padding-top: 120px;
+  color: white;
+  background-color: #92a4b2;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 13px;
+}
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 8px 11px;
+  border-radius: 12px;
+  border-top-left-radius: 0px;
+  margin-right: 4px;
+  font-size: 18px;
+}
+
+.message__time {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.message-row__own {
+  justify-content: flex-end; /*위에 message-row가 flex-box로 정의*/
+}
+
+.message-row__own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  /* order: 1; message time의 부모 message-info는 flex 상태 + 글자 순서 바꾸고 싶으면 order(순서)이용 */
+  margin-right: 0px;
+  margin-right: 4px;
+  /* reverse 한 경우 위에 줬던 margin을 빼고 새로 입력 */
+}
+.message-row__own .message__time {
+  /* message time의 부모 message-info는 flex 상태 + 글자 순서 바꾸고 싶으면 order(순서)이용, order은 오직 flex의 children에게만 적용
+  order: 0; */
+}
+
+/*order를 주지 않고 글의 순서를 바꾸고 싶다면 reverse 기능 주기 */
+.message-row__own .message__info {
+  flex-direction: row-reverse;
 }
