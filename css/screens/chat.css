@@ -88,7 +88,7 @@
   border-top-left-radius: 15px;
   /* order: 1; message time의 부모 message-info는 flex 상태 + 글자 순서 바꾸고 싶으면 order(순서)이용 */
   margin-right: 0px;
-  margin-right: 4px;
+  margin-left: 4px;
   /* reverse 한 경우 위에 줬던 margin을 빼고 새로 입력 */
 }
 .message-row__own .message__time {
@@ -99,4 +99,67 @@
 /*order를 주지 않고 글의 순서를 바꾸고 싶다면 reverse 기능 주기 */
 .message-row__own .message__info {
   flex-direction: row-reverse;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  box-sizing: border-box;
+}
+
+.reply .reply-column:first-child {
+  width: 10%;
+}
+.reply .reply-column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply input {
+  padding: 8px 9px;
+  width: 100%; /*적용하기 위해 부모 column에 width를 적용*/
+  border: var(--main-border);
+  border-radius: 25px;
+}
+
+.reply i {
+  opacity: 0.5;
+}
+
+.reply .reply-column:last-child > i,
+.reply .reply-column:last-child button {
+  position: absolute;
+  right: 0;
+  top: 9px;
+}
+
+.reply .reply-column:last-child > i {
+  right: 30px;
+}
+
+.reply .reply-column:last-child button {
+  background-color: var(--yellow);
+  border: none;
+  height: 25px;
+  border-radius: 50%;
+  top: 4px;
+  right: -10px;
+}
+
+.reply .reply-column:last-child button:focus,
+.reply .reply-column:last-child button:active {
+  outline: none;
+}
+
+.reply .reply-column:last-child button:hover {
+  cursor: pointer;
+}
+
+.reply .reply-column:last-child button i {
+  opacity: 1;
 }
