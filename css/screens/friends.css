@@ -39,4 +39,18 @@
   justify-content: center;
   align-items: center;
   font-size: 100px;
+  animation: hideSplashScreen 0.4s ease-in-out forwards;
+  /*forwards를 입력할 경우 에니메이션이 from으로 돌아가지 않고 'to'로 유지됨 그러나 이 에니메이션은 그대로 작동되어 스크린이 선택 되지 않음 따라서 visibility를 적용시킴*/
+  animation-delay: 1s;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /*애니메이션은 그대로지만 마우스에 걸리지 않도록 감추는 것*/
+  }
 }
