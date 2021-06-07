@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 800vh; /*스크롤 주려고*/
+  height: 100vh; /*스크롤 주려고*/
 }
 
 #chat-screen .alt-header,
@@ -24,6 +24,7 @@
   box-sizing: border-box;
   top: 10px;
 }
+
 .main-chat {
   margin-top: 120px;
   display: flex;
@@ -46,6 +47,39 @@
   margin-bottom: 25px;
 }
 
+@keyframes fadeInFirst {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInFirst {
+  animation: fadeInFirst 1s ease-in-out;
+}
+
+@keyframes fadeInLast {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLast {
+  animation: fadeInLast 2s linear;
+}
 .message-row img {
   width: 50px;
   height: 50px;
@@ -125,6 +159,7 @@
   width: 100%; /*적용하기 위해 부모 column에 width를 적용*/
   border: var(--main-border);
   border-radius: 25px;
+  transition: 0.4s;
 }
 
 .reply i {
@@ -162,4 +197,16 @@
 
 .reply .reply-column:last-child button i {
   opacity: 1;
+}
+
+.reply:focus-within .reply-column:first-child,
+.reply:focus-within .fa-grin-squint,
+.reply:focus-within button {
+  /*.reply안의 어떤 요소가 focus 되어있다면 발생할 일.. 이라는 뜻*/
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  height: 10vh;
+  /*효과를 주었으니 input에 transition을 줘야 함*/
 }
