@@ -145,6 +145,7 @@
   align-items: center;
   padding: 5px 25px;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply-column:first-child {
@@ -199,6 +200,12 @@
   opacity: 1;
 }
 
+.reply .reply-column:first-child,
+.reply .fa-grin-squint,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
 .reply:focus-within .reply-column:first-child,
 .reply:focus-within .fa-grin-squint,
 .reply:focus-within button {
@@ -207,6 +214,11 @@
 }
 
 .reply:focus-within input {
-  height: 10vh;
+  width: 88vw;
+  transform: translateX(-13%) translateY(-80px);
   /*효과를 주었으니 input에 transition을 줘야 함*/
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
