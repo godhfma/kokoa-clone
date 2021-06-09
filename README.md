@@ -2,4 +2,4 @@
 
 This is my first html & css code.
 
-Thankx for whatching
+Thank you for whatching
